@@ -1,3 +1,0 @@
-# There is no robots or scraping allowed on this website.
-User-agent: *
-Disallow: /
