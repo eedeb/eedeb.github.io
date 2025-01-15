@@ -127,6 +127,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('#show').click(function (event) {
+                event.preventDefault();
+                $('#chat314-main').toggle();
+            });
             
             // Handle API key submission
             var apiKeyCookie = getCookie('key');
@@ -161,13 +165,7 @@
                     }
                 });
             });
-            
-            
-            
-            $('#show').click(function (event) {
-                event.preventDefault();
-                $('#chat314-main').toggle();
-            });
+
 
 
 
@@ -273,7 +271,6 @@
             <input type="submit" value="Send">
         </form>
     </div>
-
 </body>
 
 </html>
