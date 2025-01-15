@@ -285,3 +285,217 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat314 - Online AI Assistant</title>
+    <style>
+        /* Improve typography and readability */
+        body {
+            font-family: 'Poppins', 'Comic Sans MS', 'Comic Sans', sans-serif;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            color: #38B6FF;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: rgba(52,182,255);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        /* Navigation improvements */
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 20px;
+            border: 2px solid rgba(52,182,255);
+            border-radius: 5px;
+            color: rgba(52,182,255);
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+            background-color: rgba(0,0,0);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: rgba(52, 182, 255, 0.5);
+            transform: scale(1.05);
+        }
+        .small-btn {
+            padding: 7.5px 15px;
+            font-size: 15px;
+            border: 2px solid rgba(52,182,255);
+            border-radius: 5px;
+            color: rgba(52,182,255);
+            text-decoration: none;
+            margin-bottom: 7.5px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .small-btn:hover {
+            background-color: rgba(52, 182, 255, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .section {
+            padding: 40px 0;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        .linux {
+            position: absolute;
+            width: 10px;
+            left: 80%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+        }
+        .Penguin {
+            position: absolute;
+            transform: translate(-210%, 0%);
+            width: 10px;
+            left: 13%;
+            top: 2%;
+        }
+        .Python {
+            position: absolute;
+            transform: translate(-690%, 0%);
+            width: 10px;
+            right: 13%;
+            top: 2%;
+        }
+        .code {
+            border: 2px solid #000;
+            border-radius: 25px;
+            width: 50%;
+            height: fit-content;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: 20px;
+        }
+        summary {
+            font-size: 20px;
+        }
+        .projects {
+            display: block;
+            text-align: center;
+            align-items: center;
+        }
+        .projects details {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .projects details:hover {
+            transform: translatey(-10px);
+        }
+        /* Smooth scrolling for better user experience */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .section {
+                width: 100%;
+            }
+            .btn {
+                font-size: 15px;
+                padding: 6px 12px;
+            }
+            .Penguin,
+            .Python {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- <div class="Penguin"><img src="https://raw.githubusercontent.com/eedeb/eedeb.github.io/main/linux.png" alt="Penguin" width="100px"></div>
+    <div class="Python"><img src="https://raw.githubusercontent.com/eedeb/eedeb.github.io/main/python.png" alt="Python" width="125px"></div> -->
+    <h1>Chat314: Your AI assistant</h1>
+    <nav>
+        <ul>
+            <li><a href="https://app.chat314.com/accounts" class="btn">Log In</a></li>
+            <li><a href="https://app.chat314.com/signup" class="btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="portfolio" class="section">
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Chat314 is your personal home page with a built in AI assitant. Chat314 uses a simple neural network to meet your needs and answer your questions. The neural network sends questions to different models to complete your tasks efficiently.</p>
+        <h1>How it works</h1>
+            <a href="https://github.com/eedeb/Classy" class="small-btn">Source code</a>
+            <br>
+            Chat314 uses the "Classy-AI" python package to determine where your text input should be processed. It uses the tools and models below to process your input.
+        <br>
+        <br>
+        <div class="projects">
+            <details><summary>Classy</summary>
+                <p>Classy is a python module that utilizes AI to classify natural language into categories for processing with other models and tools, such as OpenAI's ChatGPT and Dall-E, Search_Scrape, and CustomChat.</p>
+                <a href="https://github.com/eedeb/Classy" class="small-btn">Classy Repo</a>
+            </details>
+            <details><summary>CustomChat</summary>
+                <p>CustomChat is a rule based Chatbot that holds the user's attention until the user asks to be redirected to a different tool or model.</p>
+                <a href="https://github.com/eedeb/CustomChat" class="small-btn">CustomChat repo</a>
+            </details>
+            <details><summary>Search_Scrape</summary>
+                <p>Search_Scrape uses bs4 to scrape browsers for answers to user's questions. Search_Scrape then attempts to put the data into a sentence.</p>
+                <a href="https://github.com/eedeb/Search_Scrape" class="small-btn">Search_Scrape repo</a>
+            </details>
+            <details><summary>OpenAI API</summary>
+                <p>OpenAI's models ChatGPT and DALL·E are used to provide answers. An OpenAI API key is required to use these features.</p>
+                <a href="https://openai.com/api/" class="small-btn">API link</a>
+            </details>
+        </div>
+    </div>
+</section>
+<section id="about" class="section">
+      About the Creator
+      <div class="container">
+            <p>I make web apps with Python and HTML, and I also like creating small neural networks. I deploy my web apps with Linode and GitHub. I use many tools and languages, such as HTML, JavaScript, CSS, Python, Bash, NGINX, and PyTorch.</p>
+            <img width="200px" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eedeb" alt="eedeb's language stats">
+        </div>
+</section>
+<footer>
+        <h4>Other</h4>
+        <a href="https://github.com/eedeb" class="small-btn">My GitHub</a>
+        <a href="https://123scoring.com" class="small-btn">123scoring</a>
+        <a href="https://github.com/eedeb/Jimbot" class="small-btn">Jimbot</a>
+</footer>
+</body>
+</html>
