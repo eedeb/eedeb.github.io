@@ -147,7 +147,7 @@
                 $('input[name="user_input"]').val('Thinking...');
                 $.ajax({
                     type: 'POST',
-                    url: 'app.chat314.com/get_response',
+                    url: 'https://app.chat314.com/get_response',
                     data: formData,
                     success: function (data) {
                         $('input[name="user_input"]').val('');
