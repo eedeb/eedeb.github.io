@@ -127,7 +127,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            
+            // Handle API key submission
+            var apiKeyCookie = getCookie('key');
+            if (apiKeyCookie) {
+                // If cookie is set, hide the API key form and show the chat form
+                $('#api-key-form').hide();
+                $('#chat-form').show();
+            } else {
+                // Otherwise, show the API key form
+                $('#api-key-form').show();
+            }
 
+            // Handle API key submission
+            $('#api-key-form').submit(function (event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://app.chat314.com/set_api_key',
+                    data: formData,
+                    success: function (data) {
+                        if (data.status === 'success') {
+                            $('#api-key-form').hide();
+                            $('#chat-form').show();
+                        }
+                        else {
+                            alert('Wrong username or password!');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+            
+            
+            
             $('#show').click(function (event) {
                 event.preventDefault();
                 $('#chat314-main').toggle();
@@ -225,7 +261,14 @@
 
         <br><br><br>
 
-        <form id="chat-form">
+        <form id="api-key-form">
+            <input type="text" name="username" placeholder="Enter your username">
+            <input type="password" name="api_key" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <form id="chat-form" style="display: none;">
             <input type="text" name="user_input" placeholder="Talk to Chat314">
             <input type="submit" value="Send">
         </form>
@@ -234,6 +277,7 @@
 </body>
 
 </html>
+
 
 
 
