@@ -147,7 +147,7 @@
                 $('input[name="user_input"]').val('Thinking...');
                 $.ajax({
                     type: 'POST',
-                    url: '/get_response',
+                    url: 'app.chat314.com/get_response',
                     data: formData,
                     success: function (data) {
                         $('input[name="user_input"]').val('');
@@ -212,7 +212,7 @@
     <div id="chat314-main" style="display: none; position: fixed; bottom: 80px; right: 20px;">
 
 
-        <a class="chat314-btn" href="/reset">
+        <a class="chat314-btn" href="https://app.chat314.com/reset">
             <div class="chat314-icon">
                 <img src="https://raw.githubusercontent.com/Mrpi314tech/Mrpi314tech.github.io/refs/heads/main/edit-icon.png" alt="Reset">
             </div>
