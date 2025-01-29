@@ -15,5 +15,5 @@
 <h2>About</h2>
 <div style="display: flex;">
 <h3>Hello, I am Mrpi314. I am a linux developer and I use the languages Python, Bash, HTML, NGINX, and some CSS. I work on a variety of projects ranging from AI voice assistants to web based applications.</h3>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrpi314tech" alt="Mrpi314tech's language stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eedeb" alt="Mrpi314tech's language stats">
 </div>
