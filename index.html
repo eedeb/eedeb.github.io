@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,27 @@
         nav ul li {
             display: inline;
             margin-right: 15px;
+        }
+        z {
+            background-color: rgba(0,0,0,0.5);
+            color: rgba(255,255,255,1);
+            font-size: 32px;
+            padding: 1%;
+            margin: 1%;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(52, 182, 255, 0.5);
+            transition: background-color 1.7s ease, transform 1.7s ease, box-shadow 1.7s ease;
+        }
+        z:hover {
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+            transform: scale(1.05);
+        }
+        .heading {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
         }
         .btn {
             padding: 10px 20px;
@@ -146,6 +168,9 @@
             .Python {
                 display: none;
             }
+            z {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -162,10 +187,11 @@
         </ul>
     </nav>
 </header>
+<div class="heading"><z>Smart</z> <z>Efficient</z> <z>Useful</z> <z>Free</z> <z>Open Source</z></div>
 <section id="portfolio" class="section">
     <div class="container">
         <h1>Welcome</h1>
-        <p>Chat314 is your personal home page with a built in AI assitant. Chat314 uses a simple neural network to meet your needs and answer your questions. The neural network sends questions to different models to complete your tasks efficiently.</p>
+        <p>Chat314 is your personal AI assistant built out of open source models. Chat314 uses a simple neural network as a router to send your questions to LLMs, search engines, and reasoning models. Create an account in less than 5 minutes without spending any money.</p>
         <a href="https://chromewebstore.google.com/detail/ieadilkpgodanklmcecnmaecakcfdmji?utm_source=item-share-cb" class="small-btn">Chrome Extension</a>
         <a href="https://www.youtube.com/@mrpi314tech" class="small-btn">YouTube</a>
         <h1>How it works</h1>
