@@ -1,209 +1,123 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat314 - Online AI Assistant</title>
-    <style>
-        body {
-            font-family: 'Poppins', 'Comic Sans MS', 'Comic Sans', sans-serif;
-            line-height: 1.5;
-            letter-spacing: 0.5px;
-            color: #38B6FF;
-            background-color: rgba(0, 0, 0, 0.9);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 60%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header, footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: rgba(52,182,255);
-            padding: 20px;
-            text-align: center;
-            border: 2px solid #000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        /* Navigation improvements */
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-        z {
-            background-color: rgba(0,0,0,0.5);
-            color: rgba(52,182,255,1);
-            font-size: 32px;
-            padding: 1%;
-            margin: 1%;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
-            transition: background-color 1.7s ease, transform 1.7s ease, box-shadow 1.7s ease;
-        }
-        z:hover {
-            background-color: rgba(0, 0, 0, 0);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
-            transform: scale(1.05);
-        }
-        .heading {
-            margin-top: 10px;
-            width: 100%;
-            text-align: center;
-        }
-        .btn {
-            padding: 10px 20px;
-            font-size: 20px;
-            border: 2px solid rgba(52,182,255);
-            border-radius: 5px;
-            color: rgba(52,182,255);
-            text-decoration: none;
-            margin-bottom: 10px;
-            display: inline-block;
-            background-color: rgba(0,0,0);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .btn:hover {
-            background-color: rgba(52, 182, 255, 0.5);
-            transform: scale(1.05);
-        }
-        .small-btn {
-            padding: 7.5px 15px;
-            font-size: 15px;
-            border: 2px solid rgba(52,182,255);
-            border-radius: 5px;
-            color: rgba(52,182,255);
-            text-decoration: none;
-            margin-bottom: 7.5px;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        .small-btn:hover {
-            background-color: rgba(52, 182, 255, 0.5);
-            transform: scale(1.05);
-        }
-        
-        .section {
-            padding: 40px 0;
-            width: 80%;
-            margin: auto;
-            text-align: center;
-        }
-        .linux {
-            position: absolute;
-            width: 10px;
-            left: 80%;
-            top: 10%;
-            transform: translate(-50%, -50%);
-        }
-        .Penguin {
-            position: absolute;
-            transform: translate(-210%, 0%);
-            width: 10px;
-            left: 13%;
-            top: 2%;
-        }
-        .Python {
-            position: absolute;
-            transform: translate(-690%, 0%);
-            width: 10px;
-            right: 13%;
-            top: 2%;
-        }
-        .code {
-            border: 2px solid #000;
-            border-radius: 25px;
-            width: 50%;
-            height: fit-content;
-            margin: auto;
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            margin-top: 20px;
-        }
-        summary {
-            font-size: 20px;
-        }
-        .projects {
-            display: block;
-            text-align: center;
-            align-items: center;
-        }
-        .projects details {
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-        .projects details:hover {
-            transform: translatey(-10px);
-        }
-        /* Smooth scrolling for better user experience */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Media queries for responsiveness */
-        @media only screen and (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            .section {
-                width: 100%;
-            }
-            .btn {
-                font-size: 15px;
-                padding: 6px 12px;
-            }
-            .Penguin,
-            .Python {
-                display: none;
-            }
-            z {
-                font-size: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat314 - Online AI Assistant</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #38B6FF;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    header, footer {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #38B6FF;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 10px;
+    }
+    a {
+      color: #38B6FF;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #00aaff;
+    }
+    .container {
+      width: 95%;
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+    .section-title {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .small-btn, .btn {
+      background-color: #38B6FF;
+      color: #0d1117;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin: 8px 0;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .small-btn:hover, .btn:hover {
+      background-color: #00aaff;
+      transform: scale(1.05);
+    }
+    details {
+      background-color: rgba(56, 182, 255, 0.1);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+    }
+    details:hover {
+      transform: translateY(-5px);
+    }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer a {
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <!-- <div class="Penguin"><img src="https://raw.githubusercontent.com/eedeb/eedeb.github.io/main/linux.png" alt="Penguin" width="100px"></div>
-    <div class="Python"><img src="https://raw.githubusercontent.com/eedeb/eedeb.github.io/main/python.png" alt="Python" width="125px"></div> -->
-    <h1>Chat314: Your AI assistant</h1>
+  <header>
+    <h1>Chat314: Your AI Assistant</h1>
     <nav>
-        <ul>
-            <li><a href="https://app.chat314.com/accounts" class="btn">Log In</a></li>
-            <li><a href="https://app.chat314.com/signup" class="btn">Sign Up</a></li>
-            <li><a href="https://app.chat314.com" class="btn">Chat</a></li>
-        </ul>
+      <ul>
+        <li><a href="https://app.chat314.com/accounts" class="btn">Log In</a></li>
+        <li><a href="https://app.chat314.com/signup" class="btn">Sign Up</a></li>
+        <li><a href="https://app.chat314.com" class="btn">Chat</a></li>
+      </ul>
     </nav>
-</header>
-<div class="heading"><z>Smart</z> <z>Efficient</z> <z>Useful</z> <z>Free</z> <z>Open Source</z></div>
-<section id="portfolio" class="section">
-    <div class="container">
-        <h1>Welcome</h1>
-        <p>Chat314 is your personal AI assistant built out of open source models. Chat314 uses a simple neural network as a router to send your questions to LLMs, search engines, and reasoning models. Create an account in less than 5 minutes without spending any money.</p>
-        <a href="https://chromewebstore.google.com/detail/ieadilkpgodanklmcecnmaecakcfdmji?utm_source=item-share-cb" class="small-btn">Chrome Extension</a>
-        <a href="https://www.youtube.com/@mrpi314tech" class="small-btn">YouTube</a>
-        <a href="https://app.chat314.com/api" class="small-btn">API</a>
-        <h1>How it works</h1>
-            <a href="https://github.com/eedeb/Classy" class="small-btn">Source code</a>
-            <br>
-            Chat314 combines multiple API's and AI models to create an all-in-one customizable and portable AI assistant. Chat314 uses the Classy-AI python package to act as a router for these models. The model tokenizes your input and decides on the best option to generate your output.
-        <br>
-        <br>
-        <div class="projects">
-            <details><summary>Classy</summary>
+  </header>
+  
+  <div class="container">
+    <h2 class="section-title">Welcome to Chat314</h2>
+    <p>Your personal AI assistant using open-source models. Chat314 uses a smart neural network to route your queries to AI models, search engines, or reasoning tools.</p>
+    <a href="https://chromewebstore.google.com/detail/ieadilkpgodanklmcecnmaecakcfdmji?utm_source=item-share-cb" class="small-btn">Chrome Extension</a>
+    <a href="https://www.youtube.com/@mrpi314tech" class="small-btn">YouTube</a>
+    <a href="https://app.chat314.com/api" class="small-btn">API</a>
+    
+    <h2 class="section-title">How it Works</h2>
+    <p>Chat314 intelligently selects the right AI or search tool using the Classy-AI Python package, making your interactions smoother and faster.</p>
+    <a href="https://github.com/eedeb/Classy" class="small-btn">Source Code</a>
+
+    <h2 class="section-title">Components</h2>
+    <details><summary>Classy</summary>
                 <p>Classy is a python module that utilizes AI to classify natural language into categories for processing with other models and tools, such as Llama and Dall-E, Search_Scrape, and CustomChat.</p>
                 <a href="https://github.com/eedeb/Classy" class="small-btn">Classy Repo</a>
             </details>
@@ -226,21 +140,10 @@
                 <p>Logic and math problems are answered with the Deepseek r1 model.</p>
                 <a href="https://console.groq.com/keys" class="small-btn">API link</a>
             </details>
-        </div>
-    </div>
-</section>
-<section id="about" class="section">
-      About the Creator
-      <div class="container">
-            <p>I make web apps with Python and HTML, and I also like creating small neural networks. I deploy my web apps with Linode and GitHub. I use many tools and languages, such as HTML, JavaScript, CSS, Python, Bash, NGINX, and PyTorch.</p>
-            <img width="200px" align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eedeb" alt="eedeb's language stats">
-        </div>
-</section>
-<footer>
-        <h4>Other</h4>
-        <a href="https://github.com/eedeb" class="small-btn">My GitHub</a>
-        <a href="https://123scoring.com" class="small-btn">123scoring</a>
-        <a href="https://github.com/eedeb/Jimbot" class="small-btn">Jimbot</a>
-</footer>
+  </div>
+
+  <footer>
+    <a href="https://github.com/eedeb" class="small-btn">My GitHub</a>
+  </footer>
 </body>
 </html>
