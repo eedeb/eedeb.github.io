@@ -1,20 +1,2 @@
-.pong {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: black;
-}
-
-.paddle {
-  width: 10px;
-  height: 100px;
-  background: white;
-}
-
-.ball {
-  width: 15px;
-  height: 15px;
-  background: white;
-  border-radius: 50%;
-}
+body { background: #111; color: #fff; font-family: sans-serif; text-align: center; }
+canvas { background: #222; display: block; margin: 0 auto; border: 3px solid #fff; }
