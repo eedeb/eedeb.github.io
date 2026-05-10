@@ -1,0 +1,179 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat314 - Online AI Assistant</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #38B6FF;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    header, footer {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #38B6FF;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 10px;
+    }
+    a {
+      color: #38B6FF;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #00aaff;
+    }
+    .container {
+      width: 95%;
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+    .section-title {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .small-btn, .btn {
+      background-color: #38B6FF;
+      color: #0d1117;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin: 8px 0;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .small-btn:hover, .btn:hover {
+      background-color: #00aaff;
+      transform: scale(1.05);
+    }
+    details {
+      background-color: rgba(56, 182, 255, 0.1);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+    }
+    details:hover {
+      transform: translateY(-5px);
+    }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer a {
+      margin: 0 10px;
+    }
+    @media screen and (max-width: 670px) {
+      .container {
+        margin: 0px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chat314: Your AI Assistant</h1>
+    <nav>
+      <ul>
+        <li><a href="https://app.chat314.com/accounts" class="btn">Log In</a></li>
+        <li><a href="https://app.chat314.com/signup" class="btn">Sign Up</a></li>
+        <li><a href="https://app.chat314.com" class="btn">Chat</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h2 class="section-title">Welcome to Chat314</h2>
+    <p>Your personal AI assistant using open-source models. Chat314 uses a smart neural network to route your queries to AI models, search engines, or reasoning tools.</p>
+    <a href="https://chromewebstore.google.com/detail/ieadilkpgodanklmcecnmaecakcfdmji?utm_source=item-share-cb" class="small-btn">Chrome Extension</a>
+    <a href="https://www.youtube.com/@mrpi314tech" class="small-btn">YouTube</a>
+    <a href="https://app.chat314.com/api" class="small-btn">API</a>
+    <a href="https://app.chat314.com/premium" class="small-btn">Premium</a>
+    
+    <h2 class="section-title">How it Works</h2>
+    <p>Chat314 intelligently selects the right AI or search tool using the Classy-AI Python package, making your interactions smoother and faster.</p>
+    <a href="https://github.com/eedeb/Classy" class="small-btn">Source Code</a>
+
+    <h2 class="section-title">Components</h2>
+    <details><summary>Classy</summary>
+  <p>Classy is a Python module designed to classify natural language input into specific categories. It acts as a routing system, sending your questions to the right AI models or tools. Whether it's generating text with Llama, creating images with Dall-E, searching the web with the Google Search API, or just chatting, Classy ensures your query is handled by the most appropriate service.</p>
+  <a href="https://github.com/eedeb/Classy" class="small-btn">Classy Repo</a>
+</details>
+
+<details><summary>Customization</summary>
+  <p>Make Chat314 your own by customizing its appearance. You can adjust colors, change images, and personalize the overall look to suit your preferences. Experience a personalized AI assistant with just a few clicks.</p>
+  <a href="https://app.chat314.com/create" class="small-btn">Customize</a>
+</details>
+
+<details><summary>Google Search API</summary>
+  <p>Chat314 uses the Google Search API to fetch relevant information from the web. To enhance your experience, search queries are generated with the <code>llama-3.1-8b-instant</code> model and formated with the <code>gemma2-9b-it</code> model, making them clear and easy to understand. Whether you’re looking for articles, definitions, or news, Chat314 delivers accurate results efficiently.</p>
+  <a href="https://developers.google.com/custom-search/v1/introduction" class="small-btn">API Link</a>
+</details>
+
+<details><summary>LLM</summary>
+  <p>For creative and conversational tasks, Chat314 uses the <code>meta-llama/llama-4-maverick-17b-128e-instruct</code> and <code>gemma2-9b-it</code> models. You can choose between these models based on your needs — whether you want to write stories, generate lists, brainstorm ideas, or simply chat. The choice is yours.</p>
+  <a href="https://console.groq.com/keys/" class="small-btn">API Link</a>
+</details>
+
+<details><summary>Reasoning</summary>
+  <p>For logical reasoning and solving complex math problems, Chat314 uses the <code>deepseek-r1-distill-llama-70b</code> model. It’s designed to tackle challenging questions, making it a reliable assistant for problem-solving, calculations, and step-by-step explanations.</p>
+  <a href="https://console.groq.com/keys" class="small-btn">API Link</a>
+</details>
+
+<details><summary>Image Generation</summary>
+  <p>Dall-E is an AI model capable of generating images from text prompts. To use this with Chat314, obtain a premium account and submit an OpenAI api key.</p>
+</details>
+    <h2 class="section-title">Recent changes</h2>
+    <ul>
+        <li>Switch to sentence-transformers for better classification - 8/7</li>
+        <li>Upgrade search function for more accurate results - 8/2</li>
+        <li>Added "Utility" class for automation - 6/20</li>
+        <li>Update UI - 6/19</li>
+        <li>In depth search - 6/8</li>
+        <li>Long Term memory - 5/31</li>
+        <li>Streaming responses - 5/29</li>
+        <li>Smart context - 5/15</li>
+        <li>Cleaner UI - 5/8</li>
+        <li>Switch to SQLite database - 5/2</li>
+    </ul>
+  </div>
+    
+  <footer>
+    <a href="https://chat314.com/eedeb" class="small-btn">About Me</a>
+  </footer>
+</body>
+</html>
